@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft } from "lucide-react";
@@ -8,20 +7,28 @@ import { SearchFilters } from "@/components/search-filters";
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col items-center">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background">
         <div className="container flex h-16 items-center justify-between mx-auto">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Logo" className="h-8" />
-            <h1 className="text-xl font-bold">シャカサカ！</h1>
+            <img src="/logo.png" alt="Logo" className="h-15 w-auto" />
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/player-login" className="btn">
+            <Link
+              href="/player-login"
+              className="btn bg-blue-500 text-white hover:bg-blue-600 rounded-md px-4 py-2 shadow-md transition duration-200"
+            >
               選手ログイン
             </Link>
-            <Link href="/team-admin-login" className="btn">
+            <Link
+              href="/team-admin-login"
+              className="btn bg-green-500 text-white hover:bg-green-600 rounded-md px-4 py-2 shadow-md transition duration-200"
+            >
               チーム管理者ログイン
             </Link>
-            <Link href="/register" className="btn">
+            <Link
+              href="/register"
+              className="btn bg-orange-500 text-white hover:bg-orange-600 rounded-md px-4 py-2 shadow-md transition duration-200"
+            >
               新規登録はこちら
             </Link>
           </div>
@@ -40,11 +47,10 @@ export default function LandingPage() {
             <div className="container relative z-10 mx-auto px-4">
               <div className="mx-auto max-w-3xl text-center">
                 <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-                  またサッカーに本気になろう。
+                  サッカーで、大人の青春を。
                 </h1>
                 <p className="mb-10 text-xl text-white/90">
-                  Join local amateur teams that match your skill level and
-                  playing style
+                  サッカーを愛する社会人のための、チームとプレイヤーのマッチングサービス。
                 </p>
 
                 <SearchFilters />
